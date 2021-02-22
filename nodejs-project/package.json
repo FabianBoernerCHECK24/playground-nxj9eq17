@@ -1,5 +1,5 @@
 {
-  "name": "SQL Injection Demo",
+  "name": "nodejs-project-template",
   "version": "1.0.0",
   "license": "ISC",
   "dependencies": {
