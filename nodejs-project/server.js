@@ -3,9 +3,9 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var sqlite3 = require('sqlite3').verbose();
 
-var app = express();
-app.use(express.static('.'));
-app.use(bodyParser.urlencoded({extended: true}));
+var server = express();
+server.use(express.static('.'));
+server.use(bodyParser.urlencoded({extended: true}));
 
 var db = new sqlite3.Database(':memory:');
 db.serialize(function() {
@@ -13,7 +13,13 @@ db.serialize(function() {
   db.run("INSERT INTO user VALUES ('admin', 'admin123', 'App Administrator')");
 });
 // }
-app.post('/login', function (req, res) {
+
+server.get('/', function(req, res) {
+  console.log("/ is called on server");
+  res.sendFile(path.join(__dirname + '/index.html'));
+});
+
+server.post('/login', function (req, res) {
   var username = req.body.username; // a valid username is admin
   var password = req.body.password; // a valid password is admin123
   var query = "SELECT name FROM user where username = '" + username + "' and password = (?)";
@@ -36,5 +42,8 @@ app.post('/login', function (req, res) {
 
 });
 
+console.log("Opening the server");
 app.listen(8080);
+console.log('TECHIO> open -p 8080 /');
+console.log("Server opened");
 
