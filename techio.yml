@@ -6,5 +6,5 @@ projects:
   nodejs:
     root: /nodejs-project
     runner:
-      name: check24/sql-injection-demo
+      name: techio/node-npm-runner
       version: latest
