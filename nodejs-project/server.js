@@ -28,7 +28,7 @@ server.post('/login', function (req, res) {
   console.log("password: " + password);
   console.log('query: ' + query);
 
-  db.get(query , [password], function(err, row) {
+  db.get(query, function(err, row) {
 
     if(err) {
       console.log('ERROR', err);
