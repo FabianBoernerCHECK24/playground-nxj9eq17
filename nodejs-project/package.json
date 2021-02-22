@@ -1,0 +1,9 @@
+{
+  "name": "nodejs-project-template",
+  "version": "1.0.0",
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^3.4.2"
+  },
+  "private": true
+}
