@@ -4,7 +4,7 @@ dieses Beispiel soll euch demonstrieren wie es zu einer SQL Injection kommen kan
 
 # Hands-on Demo
 
-@[Beispiel APP]({ "stubs": ["app.js", "run.sh", "index.html", "style.css"], "command": "sudo ./run.sh" })
+@[Beispiel APP]({ "stubs": ["app.js", "run.sh", "index.html", "style.css"], "command": "./run.sh" })
 
 Check out the markdown file [`welcome.md`](https://github.com/TechDotIO/nodejs-template/blob/master/markdowns/welcome.md) to see how this exercise is injected into the template.
 
