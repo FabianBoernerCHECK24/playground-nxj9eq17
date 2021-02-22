@@ -43,7 +43,7 @@ server.post('/login', function (req, res) {
 });
 
 console.log("Opening the server");
-app.listen(8080);
+server.listen(8080);
 console.log('TECHIO> open -p 8080 /');
 console.log("Server opened");
 
