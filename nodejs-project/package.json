@@ -1,9 +1,11 @@
 {
-  "name": "nodejs-project-template",
+  "name": "SQL Injection Demo",
   "version": "1.0.0",
   "license": "ISC",
   "dependencies": {
-    "mocha": "^3.4.2"
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "sqlite3": "^5.0.2"
   },
   "private": true
 }

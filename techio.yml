@@ -1,10 +1,10 @@
 title: Node.js Project
 plan:
-- title: Welcome
+- title: Hi
   statement: markdowns/welcome.md
 projects:
   nodejs:
     root: /nodejs-project
     runner:
-      name: techio/node-npm-runner
+      name: check24/sql-injection-demo
       version: latest
