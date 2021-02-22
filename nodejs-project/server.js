@@ -24,26 +24,26 @@ server.post('/login', function (req, res) {
   var password = req.body.password; // a valid password is admin123
   var query = "SELECT name FROM user where username = '" + username + "' and password = '" + password + "'";
 
-  console.log("username: " + username);
-  console.log("password: " + password);
-  console.log('query: ' + query);
+  console.log("Benutzername: " + username);
+  console.log("Passwort: " + password);
+  console.log('Datenbank Abfrage: ' + query);
 
   db.get(query, function(err, row) {
 
     if(err) {
-      console.log('ERROR', err);
+      console.log('FEHLER', err);
       res.redirect("/index.html#error");
     } else if (!row) {
       res.redirect("/index.html#unauthorized");
     } else {
-      res.send('Hello <b>' + row.name + '</b><br /><a href="/index.html">Go back to login</a>');
+      res.send('Hi, <b>' + row.name + '</b><br /><a href="/index.html">Zurück zur Login-Seite</a>');
     }
   });
 
 });
 
-console.log("Opening the server");
+console.log("Server wird gestartet");
 server.listen(8080);
 console.log('TECHIO> open -p 8080 /');
-console.log("Server opened");
+console.log("Server gestartet");
 
